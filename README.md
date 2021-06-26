@@ -2,5 +2,4 @@
 DEV : FRIENDLY JIHAD TAQWANA
 
 
-Diuji di matriks : [5][3]
-                   [3][2]
+Diuji di matriks : [5][3][3][2]
