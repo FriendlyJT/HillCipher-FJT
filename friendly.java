@@ -4,6 +4,9 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.BufferedWriter;
 import java.util.Scanner;
 
 public class friendly {
@@ -101,7 +104,7 @@ public static String WorkString = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrs
         return output.toString();
     }
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException{
         int[][] matrik = new int[2][2];
         String teks = "";
         ProcessType processType = null;
@@ -131,7 +134,7 @@ public static String WorkString = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrs
             int oneOfOne = scan.nextInt();
             matrik[1][1] = oneOfOne;
             if(processType == ProcessType.ENKRIPSI) {
-                System.out.println("\nSEDANG PROSES ENKRIPSI D://input.txt ... ");
+                System.out.println("\nSEDANG PROSES ENKRIPSI \"D://input.txt\" ... ");
             } else{
                 System.out.println("\nMASUKAN TEKS UNTUK DI DEKRIPSI: ");
             }
@@ -143,7 +146,18 @@ public static String WorkString = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrs
                 String getDataString = scans.nextLine();
                 if(ProcessType.ENKRIPSI.equals(processType)) {
                     String encryptedMessage = enkripsiMatriks(matrik, getDataString);
-                    System.out.println("\nHASIL ENKRIPSI :" + encryptedMessage);
+                    System.out.println("\nSUKSES ENKRIPSI :" + encryptedMessage);
+                 
+                    File writer = new File("D:\\output.txt");
+                    try(BufferedWriter hasil = new BufferedWriter(new FileWriter(writer))){
+                         hasil.write(encryptedMessage);
+                    }
+                    catch(IOException e)
+                    {
+                    e.printStackTrace();
+                    }
+                     System.out.println("\nHASIL DEKRIPSI DISIMPAN KE : \"D://output.txt\"");
+                
                 }
                 else{
                     Scanner scanner = new Scanner(System.in);
