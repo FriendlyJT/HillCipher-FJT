@@ -156,7 +156,7 @@ public static String WorkString = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrs
                     {
                     e.printStackTrace();
                     }
-                     System.out.println("\nHASIL DEKRIPSI DISIMPAN KE : \"D://output.txt\"");
+                     System.out.println("\nHASIL ENKRIPSI DISIMPAN KE : \"D://output.txt\"");
                 
                 }
                 else{
