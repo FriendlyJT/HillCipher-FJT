@@ -124,17 +124,18 @@ public static String WorkString = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrs
             Scanner scan = new Scanner(System.in);
             int zeroOfZero = scan.nextInt();
             matrik[0][0] = zeroOfZero;
-            System.out.println("[0][X]\n[0][0]\nMASUKAN ELEMEN : ");
+            System.out.println("["+zeroOfZero+"]"+"[X]\n[0][0]\nMASUKAN ELEMEN : ");
             int zeroOfOne = scan.nextInt();
             matrik[0][1] = zeroOfOne;
-            System.out.println("[0][0]\n[X][0]\nMASUKAN ELEMEN : ");
+            System.out.println("["+zeroOfZero+"]"+"["+ zeroOfOne +"]"+"\n[X][0]\nMASUKAN ELEMEN : ");
             int oneOfZero = scan.nextInt();
             matrik[1][0] = oneOfZero;
-            System.out.println("[0][0]\n[0][X]\nMASUKAN ELEMEN : ");
+            System.out.println("["+zeroOfZero+"]"+"["+ zeroOfOne +"]"+"\n["+oneOfZero+"][X]\nMASUKAN ELEMEN : ");
             int oneOfOne = scan.nextInt();
+            System.out.println("["+zeroOfZero+"]"+"["+ zeroOfOne +"]"+"\n["+oneOfZero+"]"+"["+oneOfOne+"]");
             matrik[1][1] = oneOfOne;
             if(processType == ProcessType.ENKRIPSI) {
-                System.out.println("\nSEDANG PROSES ENKRIPSI \"D://input.txt\" ... ");
+                System.out.println("\nSEDANG PROSES ENKRIPSI FILE DI \"D://input.txt\" ... ");
             } else{
                 System.out.println("\nMASUKAN TEKS UNTUK DI DEKRIPSI: ");
             }
